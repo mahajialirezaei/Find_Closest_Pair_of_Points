@@ -7,8 +7,6 @@ class Node:
         self.x = x
         self.y = y
 
-    def __str__(self):
-        return f'({self.x}, {self.y})'
 
     def dist(self, q):
         return math.sqrt((self.x - q.x) **2 + (self.y - q.y) **2)
@@ -77,7 +75,7 @@ lst_y = sorted(lst, key = lambda p : p.y)
 
 p, q, distance = Node.closest_pair(lst_x, lst_y)
 
-print(p, q, distance)
+print(distance)
 
 
 
